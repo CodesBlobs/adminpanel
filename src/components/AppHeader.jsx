@@ -5,7 +5,9 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Logout } from '@mui/icons-material';
+import { useProSidebar } from 'react-pro-sidebar';
 const AppHeader = () => {
+    const { collapseSidebar, toggleSidebar, broken} = useProSidebar()
     /** @type {import("@mui/material").SxProps} */
   
   const styles = {
@@ -20,17 +22,23 @@ const AppHeader = () => {
     }
   }
   return (
+    // Using a toolbar can use its default written css to keep your appbar tidy(if not then you have to use your own css)
+
     <AppBar position='sticky' sx={styles.appBar}>
         <Toolbar>
-            <IconButton onClick={()=>{console.log("abc")}} color="secondary">
+            <IconButton onClick={()=> broken ? toggleSidebar() : collapseSidebar()} color="secondary">
                 <MenuIcon/>
             </IconButton>
+            {/** Make sure to mostly use the components from the same package/website as the parent 
+             * for example: if I use the Image component that is not from mui replacing the box component,
+             * they won't actually work well together. Because sometimes the child needs to have a certain 
+             * parent component
+            */}
             <Box component='img'
             sx = {styles.appLogo}
-            src='https://yt3.googleusercontent.com/ytc/AL5GRJVCqoQl_kzLyudwEEx-Lb65xfu-60JrciaIuStNQg=s900-c-k-c0x00ffffff-no-rj'>
-            
+            src='https://yt3.googleusercontent.com/ytc/AL5GRJVCqoQl_kzLyudwEEx-Lb65xfu-60JrciaIuStNQg=s900-c-k-c0x00ffffff-no-rj'/>
+           <Box sx={{flexGrow: 1}}/> 
 
-            </Box>
             <IconButton title="Notifications" color='secondary'>
             <Badge badgeContent={14} color="error">
             <NotificationsIcon/>
@@ -40,10 +48,10 @@ const AppHeader = () => {
             <IconButton title='Settings' color='secondary'>
                 <SettingsIcon/>
             </IconButton>
-            <IconButton title="SighOut" color='secondary'>
+            <IconButton title="SignOut" color='secondary'>
                 <LogoutIcon/>
             </IconButton>
-        </Toolbar>
+            </Toolbar>
     </AppBar>
   )
 

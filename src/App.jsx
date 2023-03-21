@@ -8,7 +8,7 @@ import '@fontsource/roboto/700.css';
 import theme from './config/theme';
 import SideNav from './components/SideNav';
 import AppHeader from './components/AppHeader';
-import { SelfImprovement } from '@mui/icons-material';
+import { Height, SelfImprovement } from '@mui/icons-material';
 
 function App() {
   /** @type {import("@mui/material").SxProps} */
@@ -18,10 +18,13 @@ function App() {
     container: {
         display: 'flex',
         bgcolor: 'neutral.light',
-        height: 'calc(100% - 64px'
+        height: 'calc(100% - 64px)'
     },
     mainSection:{
-      
+      p:1,
+      width: '100%',
+      height: '100%',
+      overflow: 'auto'
     }
   }
   return (
