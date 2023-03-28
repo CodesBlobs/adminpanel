@@ -9,6 +9,8 @@ import theme from './config/theme';
 import SideNav from './components/SideNav';
 import AppHeader from './components/AppHeader';
 import { Height, SelfImprovement } from '@mui/icons-material';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './router/AppRoutes';
 
 function App() {
   /** @type {import("@mui/material").SxProps} */
@@ -34,10 +36,12 @@ function App() {
         <AppHeader/>
 
         <Box sx={styles.container}>
+          <BrowserRouter>
             <SideNav/>
             <Box component={'main'} sx={styles.mainSection}>
-
+              <AppRoutes/>
             </Box>
+            </BrowserRouter>
         </Box>
       </ThemeProvider>
     </React.Fragment>
