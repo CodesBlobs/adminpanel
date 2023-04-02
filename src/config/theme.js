@@ -1,11 +1,11 @@
 import { createTheme } from "@mui/material";
-import { green, grey, indigo } from "@mui/material/colors";
+import { green, grey, indigo,blue } from "@mui/material/colors";
 
 let theme = createTheme({
     palette: {
         primary: {
             main: indigo[500],
-            light: indigo.A700
+            light: indigo['A700']
         },
         secondary:{
             main:indigo[50]
@@ -29,7 +29,7 @@ theme = createTheme(theme, {
                 fontSize: '0.9rem'
             },
             fontWeight: 500,
-            color: theme.palette.primary.normal,
+            color: theme.palette.primary.light,
             display: 'block',
             cursor: 'pointer'
         },
