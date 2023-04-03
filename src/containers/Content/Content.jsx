@@ -20,7 +20,7 @@ const columns = [
                 <Typography sx={styles.videoTitle}>Must Know JavaScript Interview Questions | Part 1</Typography>
                 <Typography sx={styles.videoDescription}>In this video you will learn how to solve JavaScript interview questions.</Typography>
             </Box>
-        </Box>,
+        </Box>
 
     },
 
