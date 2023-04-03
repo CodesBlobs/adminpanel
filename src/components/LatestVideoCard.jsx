@@ -6,7 +6,7 @@ const LatestVideoCard = (props) => {
      <CardContent>
         <Typography variant='cardTitle'>Latest Video Performance</Typography>
         <Box sx={styles.LatestVideoContainer}>
-            <Box sx={styles.latestVideoThumbnail} component={'img'} src='src/assets/meeeee.jpg'/>
+            <Box sx={styles.latestVideoThumbnail} component={'img'} src='src/assets/thumbnail1.jpg'/>
             <Typography sx={styles.latestVideoTitle}>React mr m</Typography>
         </Box>
         <Typography variant='h7' sx={styles.latestVideoTimeLable}>First 6 hours: </Typography>

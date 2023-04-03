@@ -20,7 +20,7 @@ const SideNav = () => {
 
 >
   <Box sx={styles.avatarContaniner}>
-    <Avatar sx={styles.avatar} className='ml4' alt='Channel Name' src="src/assets/meeeee.jpg"/>
+    <Avatar sx={styles.avatar} className='ml4' alt='Channel Name' src="src/assets/avatars/masoud.jpeg"/>
     {!collapsed ? <Typography  variant="body2" sx={styles.yourChannel}>Your Channel</Typography> : null}
     {!collapsed ? <Typography variant="overline">Maths Kiddo</Typography> : null}
 
